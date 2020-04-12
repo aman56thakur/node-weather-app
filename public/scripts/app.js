@@ -8,6 +8,8 @@ weatherForm.addEventListener('submit', (e) => {
 
     fetch(url).then((response) => {
         response.json().then((data) => {
+            document.getElementById('para_2').innerHTML = ""
+            document.getElementById('para_3').innerHTML = ""
             if (data.error) return document.getElementById('para_1').innerHTML = data.error
             document.getElementById('para_1').innerHTML = "City:\t" + data.city
             document.getElementById('para_2').innerHTML = "Condition:\t" + data.condition
