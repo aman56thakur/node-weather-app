@@ -4,7 +4,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const city = document.getElementById('input_city').value
     const country = document.getElementById('input_country').value
-    const url = 'http://localhost:3000/weather?city=' + city + '&country=' + country
+    const url = '/weather?city=' + city + '&country=' + country
 
     fetch(url).then((response) => {
         response.json().then((data) => {
